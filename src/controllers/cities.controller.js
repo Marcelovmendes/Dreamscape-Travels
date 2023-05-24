@@ -1,10 +1,10 @@
-import {db} from "../dataBase/dataBase.connection";
-import { cities } from "../data/cities";
+import { db } from "../dataBase/dataBase.connection.js";
+import { newCities } from "../data/newCities.js";
 
 export async function addCity(){
 
-  try{ await Promise.all(cities.map((c)=>{
-    const query = `INSERT TO cities (name) VALUES ($1)`;
+  try{ await Promise.all(newCities.map((c)=>{
+    const query = `INSERT INTO cities (name) VALUES ($1)`;
     const values = [c.name];
     return db.query(query,values)
   }))
@@ -13,7 +13,6 @@ export async function addCity(){
     console.log(err);
   } 
 }
-addCity();
 
 export async function getCities(req, res) {
     

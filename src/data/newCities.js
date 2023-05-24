@@ -1,4 +1,4 @@
-export const cities =[
+export const newCities =[
 {name:'Rio de Janeiro'},
 {name:'São Paulo'},
 {name:'Belo Horizonte'},
