@@ -1,5 +1,5 @@
 import { db } from "../dataBase/dataBase.connection.js";
-import { newHotels } from "../data/newHotels.js";
+
 
 export async function addAccomodattion() {
   try {
