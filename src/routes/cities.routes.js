@@ -4,6 +4,6 @@ import {  getAllCities, searchCities } from "../controllers/cities.controller.js
 const cityRouter = Router();
 
 cityRouter.get("/",getAllCities );
-cityRouter.get("/", searchCities)
+cityRouter.get("/search", searchCities)
  
 export default cityRouter;
