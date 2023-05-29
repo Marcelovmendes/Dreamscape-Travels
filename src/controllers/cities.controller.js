@@ -18,7 +18,7 @@ export async function searchCities(req, res) {
   const { searchTerm } = req.query;
 
   try {
-    const cities = await db.query('SELECT * FROM cities WHERE city_name ILIKE $1', [`%${searchTerm}%`]);
+    const cities = await db.query('SELECT * FROM cities WHERE name ILIKE $1', [`%${searchTerm}%`]);
 
     if (cities.rows.length === 0) return res.status(404).send("No cities found");
 
