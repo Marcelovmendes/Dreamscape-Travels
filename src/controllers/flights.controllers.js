@@ -1,5 +1,4 @@
-  import { db } from "../dataBase/dataBase.connection.js";
-// import newFlights from "../data/newFlights.js";
+  import { db } from "../dataBase/dataBase.connection.js"
   
   export async function getAllFlights(req, res) {
     
